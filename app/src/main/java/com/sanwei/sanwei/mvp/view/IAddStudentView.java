@@ -5,4 +5,5 @@ package com.sanwei.sanwei.mvp.view;
  */
 
 public interface IAddStudentView {
+    void addResult(boolean is);
 }

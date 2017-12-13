@@ -25,7 +25,7 @@ public class AddStudentsPersenter implements IAddStudentsPersenter{
         modle.modleAddstudents(name, photo, teachername, new AddCallBack() {
             @Override
             public void addCallBack(boolean is) {
-
+                view.addResult(is);
             }
         });
     }

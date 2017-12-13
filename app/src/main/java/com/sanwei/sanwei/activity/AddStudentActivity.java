@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.sanwei.sanwei.R;
 import com.sanwei.sanwei.base.BaseActivity;
@@ -62,5 +63,13 @@ public class AddStudentActivity extends BaseActivity implements IAddStudentView{
     @OnClick(R.id.ensure)
     public void ensuer() {
         persenter.addStudents(editText.getText().toString(), "", "");
+    }
+
+    @Override
+    public void addResult(boolean is) {
+        if(is){
+            Toast.makeText(AddStudentActivity.this, "信息录入成功", Toast.LENGTH_SHORT);
+            finish();
+        }
     }
 }
