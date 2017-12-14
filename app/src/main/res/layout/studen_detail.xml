@@ -3,12 +3,19 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1">
-
-    </LinearLayout>
+        <Button
+            android:id="@+id/update"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:text="添加成绩"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"/>
+    </RelativeLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,6 +23,7 @@
         android:layout_height="0dp"
         android:layout_weight="9">
         <android.support.v4.widget.CircleImageView
+            android:id="@+id/student_photo"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_gravity="center_horizontal" />
@@ -38,6 +46,40 @@
                 android:layout_marginLeft="20dp"
                 android:text="ceshi"/>
         </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/chiness"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:text="语文"/>
+            <Button
+                android:id="@+id/math"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:text="数学"/>
+            <Button
+                android:id="@+id/english"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:text="英语"/>
+            <Button
+                android:id="@+id/chart"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:text="图标"/>
+        </LinearLayout>
         <android.support.v4.view.ViewPager
             android:id="@+id/student_achievement"
             android:layout_width="match_parent"

@@ -1,5 +1,6 @@
 package com.sanwei.sanwei.activity;
 
+import com.beardedhen.androidbootstrap.TypefaceProvider;
 import com.sanwei.sanwei.mvp.MvpHelp;
 import com.sanwei.sanwei.mvp.component.AppComponent;
 import com.sanwei.sanwei.mvp.component.DaggerAppComponent;
@@ -18,6 +19,7 @@ public class AppApplication extends LitePalApplication {
     @Override
     public void onCreate(){
         super.onCreate();
+        TypefaceProvider.registerDefaultIconSets();
         initMvp();
         MvpHelp.getInstance().setAppComponent(appComponent);
     }
