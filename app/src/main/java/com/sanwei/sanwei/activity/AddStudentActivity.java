@@ -23,6 +23,7 @@ import butterknife.OnClick;
 
 /**
  * Created by tangdi on 12/12/17.
+ * tangxing jiaru
  */
 
 public class AddStudentActivity extends BaseActivity implements IAddStudentView{
