@@ -27,6 +27,7 @@ public class MainActivity extends BaseActivity implements IMainActivityView {
     @BindView(R.id.bn01)
     Button bn01;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

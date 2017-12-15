@@ -1,11 +1,11 @@
 package com.sanwei.sanwei.activity;
 
 import android.os.Bundle;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.beardedhen.androidbootstrap.BootstrapButton;
+import com.beardedhen.androidbootstrap.BootstrapCircleThumbnail;
+import com.beardedhen.androidbootstrap.BootstrapEditText;
 import com.sanwei.sanwei.R;
 import com.sanwei.sanwei.base.BaseActivity;
 import com.sanwei.sanwei.fragment.CameraDialog;
@@ -26,17 +26,17 @@ import butterknife.OnClick;
  * tangxing jiaru
  */
 
-public class AddStudentActivity extends BaseActivity implements IAddStudentView{
+public class AddStudentActivity extends BaseActivity implements IAddStudentView {
 
     @Inject
     IAddStudentsPersenter persenter;
-
     @BindView(R.id.image_view)
-    ImageView imageView;
+    BootstrapCircleThumbnail imageView;
     @BindView(R.id.edit_text)
-    EditText editText;
+    BootstrapEditText editText;
     @BindView(R.id.ensure)
-    Button ensure;
+    BootstrapButton ensure;
+
 
     @Override
     public void initMvp() {
@@ -68,7 +68,7 @@ public class AddStudentActivity extends BaseActivity implements IAddStudentView{
 
     @Override
     public void addResult(boolean is) {
-        if(is){
+        if (is) {
             Toast.makeText(AddStudentActivity.this, "信息录入成功", Toast.LENGTH_SHORT);
             finish();
         }

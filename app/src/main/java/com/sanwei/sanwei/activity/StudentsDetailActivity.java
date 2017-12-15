@@ -4,9 +4,10 @@ import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.TextView;
 
+import com.beardedhen.androidbootstrap.AwesomeTextView;
+import com.beardedhen.androidbootstrap.BootstrapButton;
+import com.beardedhen.androidbootstrap.BootstrapCircleThumbnail;
 import com.sanwei.sanwei.R;
 import com.sanwei.sanwei.base.BaseActivity;
 
@@ -19,14 +20,16 @@ import butterknife.OnClick;
  */
 
 public class StudentsDetailActivity extends BaseActivity {
+
+
     @BindView(R.id.update)
-    Button update;
+    BootstrapButton update;
     @BindView(R.id.student_photo)
-    ImageView studentPhoto;
+    BootstrapCircleThumbnail studentPhoto;
     @BindView(R.id.student_name)
-    TextView studentName;
+    AwesomeTextView studentName;
     @BindView(R.id.teacher_name)
-    TextView teacherName;
+    AwesomeTextView teacherName;
     @BindView(R.id.chiness)
     Button chiness;
     @BindView(R.id.math)

@@ -1,27 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content">
     
-    <TextView
+    <com.beardedhen.androidbootstrap.AwesomeTextView
         android:id="@+id/camera"
         android:layout_width="180dp"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:paddingTop="20dp"
         android:paddingBottom="20dp"
-        android:text="拍照"/>
+        app:bootstrapText="拍照"
+        app:bootstrapBrand="danger"/>
     <View
         android:layout_width="180dp"
         android:layout_height="0.5dp"
         android:background="#000000"/>
-    <TextView
+    <com.beardedhen.androidbootstrap.AwesomeTextView
         android:id="@+id/photo"
         android:layout_width="180dp"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:paddingTop="20dp"
         android:paddingBottom="20dp"
-        android:text="手机相册"/>
+        app:bootstrapText="手机相册"
+        app:bootstrapBrand="danger"/>
 
 </LinearLayout>

@@ -6,8 +6,8 @@ import android.support.v4.app.DialogFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
+import com.beardedhen.androidbootstrap.AwesomeTextView;
 import com.sanwei.sanwei.R;
 
 import butterknife.BindView;
@@ -20,11 +20,12 @@ import butterknife.Unbinder;
  */
 
 public class CameraDialog extends DialogFragment {
-    @BindView(R.id.camera)
-    TextView camera;
-    @BindView(R.id.photo)
-    TextView photo;
+
     Unbinder unbinder;
+    @BindView(R.id.camera)
+    AwesomeTextView camera;
+    @BindView(R.id.photo)
+    AwesomeTextView photo;
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,

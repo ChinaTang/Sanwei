@@ -6,9 +6,9 @@ import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ListView;
 
+import com.beardedhen.androidbootstrap.BootstrapButton;
 import com.sanwei.sanwei.R;
 import com.sanwei.sanwei.activity.AddStudentActivity;
 import com.sanwei.sanwei.adapter.StudentListAdapter;
@@ -33,15 +33,16 @@ import butterknife.Unbinder;
  * Created by tangdi on 12/11/17.
  */
 
-public class StudentListFragment extends BaseFragment implements IStudentListView{
-    @BindView(R.id.add_student)
-    Button addStudent;
+public class StudentListFragment extends BaseFragment implements IStudentListView {
+
     @BindView(R.id.list_view)
     ListView listView;
     Unbinder unbinder;
 
     @Inject
     IStudentListPersenter persenter;
+    @BindView(R.id.add_student)
+    BootstrapButton addStudent;
 
     private StudentListAdapter adapter;
 
@@ -78,13 +79,13 @@ public class StudentListFragment extends BaseFragment implements IStudentListVie
         startActivity(intent);
     }
 
-    public void initData(){
+    public void initData() {
         persenter.initViewData();
     }
 
     @Override
     public void initView(List<StudentSql> list) {
-        if(list != null){
+        if (list != null) {
             adapter = new StudentListAdapter(list);
             listView.setAdapter(adapter);
         }
